@@ -28,7 +28,7 @@ public class DiscoveryClientFeignApplication {
         @GetMapping("/test")
         public String test() {
             String result = client.hello("feign");
-            return "Return : " + result;
+            return "Return : " + result + "\n";
         }
     }
 

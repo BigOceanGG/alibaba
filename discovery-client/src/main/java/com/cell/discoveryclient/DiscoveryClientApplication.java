@@ -42,13 +42,13 @@ public class DiscoveryClientApplication {
             String url = serviceInstance.getUri() + "/hello?name=" + "didi";
             RestTemplate restTemplate = new RestTemplate();
             String result = restTemplate.getForObject(url, String.class);
-            return "Invoke : " + url + ", return : " + result;
+            return "Invoke : " + url + ", return : " + result + "\n";
         }
 
         @GetMapping("/testrest")
         public String testrest() {
             String result = restTemplate.getForObject("http://discovery-server/hello?name=rest", String.class);
-            return "Return : " + result;
+            return "Return : " + result + "\n";
         }
 
         @GetMapping("/testweb")
